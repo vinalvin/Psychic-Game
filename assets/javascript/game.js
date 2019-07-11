@@ -19,13 +19,13 @@ document.onkeypress = function(event) {
         pickLetter()
     } else {
         guessesLeft--;
+        0 <= guessesLeft;
         document.querySelector("#guessesLeft").innerHTML = guessesLeft;
         lettersGuessed.push(event.key);
-        document.querySelector("#letterGuessed").innerHTML = lettersGuessed.join();
+        document.querySelector("#lettersGuessed").innerHTML = lettersGuessed.join();
     }
     console.log("wins", wins);
     console.log("guessesLeft", guessesLeft);
-
     if (guessesLeft == 0) {
         losses++;
         document.querySelector("#losses").innerHTML = losses;
