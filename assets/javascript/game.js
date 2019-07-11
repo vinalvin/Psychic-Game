@@ -20,8 +20,8 @@ document.onkeypress = function(event) {
     } else {
         guessesLeft--;
         document.querySelector("#guessesLeft").innerHTML = guessesLeft;
-        computerGuess.push(event.key);
-        document.querySelector("#computerGuess").innerHTML = computerGuess.join();
+        lettersGuessed.push(event.key);
+        document.querySelector("#letterGuessed").innerHTML = lettersGuessed.join();
     }
     console.log("wins", wins);
     console.log("guessesLeft", guessesLeft);
@@ -30,8 +30,8 @@ document.onkeypress = function(event) {
         losses++;
         document.querySelector("#losses").innerHTML = losses;
         guesses = 9;
-        computerGuess = [];
-        document.querySelector("#computerGuess").innerHTML = computerGuess.join();
+        lettersGuessed = [];
+        document.querySelector("#lettersGuessed").innerHTML = lettersGuessed.join();
         pickLetter();
     }
     console.log("losses", losses);
