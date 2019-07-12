@@ -29,7 +29,7 @@ document.onkeypress = function(event) {
     if (guessesLeft == 0) {
         losses++;
         document.querySelector("#losses").innerHTML = losses;
-        guesses = 9;
+        guessesLeft = 9;
         lettersGuessed = [];
         document.querySelector("#lettersGuessed").innerHTML = lettersGuessed.join();
         pickLetter();
